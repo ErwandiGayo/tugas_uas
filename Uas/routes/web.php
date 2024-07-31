@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupirController;
+use App\Http\Controllers\BarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/supir', [SupirController::class, 'index']);
 Route::get('/supir/form/', [SupirController::class, 'create']);
 Route::post('/supir/store/', [SupirController::class, 'store']);
+Route::get('/supir/edit/{id}', [SupirController::class, 'edit']);
+Route::put('/supir/{id}', [SupirController::class, 'update']);
+Route::delete('/supir/{id}', [SupirController::class, 'destroy']);
+
+Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/barang/form/', [BarangController::class, 'create']);
+Route::post('/barang/store/', [BarangController::class, 'store']);
+Route::get('/barang/edit/{id}', [BarangController::class, 'edit']);
+Route::put('/barang/{id}', [BarangController::class, 'update']);
+Route::delete('/barang/{id}', [BarangController::class, 'destroy']);
+

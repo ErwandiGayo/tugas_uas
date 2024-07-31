@@ -45,7 +45,7 @@ class SupirController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**
@@ -53,7 +53,8 @@ class SupirController extends Controller
      */
     public function edit(string $id)
     {
-        
+        $supir = Supir::find($id);
+        return view('supir.edit', compact('supir'));
     }
 
     /**
@@ -61,7 +62,13 @@ class SupirController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $supir = Supir::find($id);
+        $supir->nama_supir = $request->nama_supir;
+        $supir->alamat = $request->alamat;
+        $supir->telp = $request->telp;
+        $supir->no_ktp = $request->no_ktp;
+        $supir->save();
+        return redirect('/supir');
     }
 
     /**
@@ -69,6 +76,8 @@ class SupirController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $supir = Supir::find($id);
+        $supir->delete();
+        return redirect('/supir');
     }
 }

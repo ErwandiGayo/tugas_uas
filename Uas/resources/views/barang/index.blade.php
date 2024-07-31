@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('heading','Data Supir')
+@section('heading','Data Barang')
 
 @section('bc')
     <div class="col-sm-6">
@@ -14,7 +14,7 @@
     <div class="card">
         <div class="card-header">
         <h3 class="card-title">
-            <a href="/supir/form/" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
+            <a href="/barang/form/" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
         </h3>
 
         <div class="card-tools">
@@ -31,23 +31,21 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Supir</th>
-                        <th>Alamat</th>
-                        <th>Telephone</th>
-                        <th>KTP</th>
+                        <th>Nama Barang</th>
+                        <th>Harga</th>
+                        <th>Jenis Gas</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($supir as $item)
+                    @forelse ($brg as $item)
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$item->nama_supir}}</td>
-                        <td>{{$item->alamat}}</td>
-                        <td>{{$item->telp}}</td>
-                        <td>{{$item->no_ktp}}</td>
+                        <td>{{$item->nama_brg}}</td>
+                        <td>{{$item->harga}}</td>
+                        <td>{{$item->jenis}}</td>
                         <td>
-                            <a href="/supir/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
+                            <a href="/barang/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
 
                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                 <i class="fa fa-trash"></i>
@@ -61,11 +59,11 @@
                                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Yakin Data Supir {{$item->nama_supir}} di Hapus?
+                                        Yakin Data Barang {{$item->nama_brg}} di Hapus?
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                    <form action="/supir/{{$item->id}}" method="post">
+                                    <form action="/barang/{{$item->id}}" method="post">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-primary">Hapus</button>
