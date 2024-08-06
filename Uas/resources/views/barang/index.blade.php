@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('heading','Data Barang')
-
+@section('title','Barang')
 @section('bc')
     <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">

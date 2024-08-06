@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupirController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,11 @@ Route::post('/barang/store/', [BarangController::class, 'store']);
 Route::get('/barang/edit/{id}', [BarangController::class, 'edit']);
 Route::put('/barang/{id}', [BarangController::class, 'update']);
 Route::delete('/barang/{id}', [BarangController::class, 'destroy']);
+
+Route::get('/Customer', [CustomerController::class, 'index']);
+Route::get('/Customer/form/', [CustomerController::class, 'create']);
+Route::post('/Customer/store/', [CustomerController::class, 'store']);
+Route::get('/Customer/edit/{id}', [CustomerController::class, 'edit']);
+Route::put('/Customer/{id}', [CustomerController::class, 'update']);
+Route::delete('/Customer/{id}', [CustomerController::class, 'destroy']);
 

@@ -41,10 +41,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Jenis Gas</label>
-                            <select name="jenis" class="form-control" id="">
+                            <select name="jenis" class="form-control" id="jenis">
+                            < name="jenis" class="form-control" id="">
                                 <option value="">-Pilih Jenis Gas -</option>
                                 <option value="5.5 KG">5.5 KG</option>
-                                <option value="12 KG">12 KG</option>
+                                <option value="12 KG">12 KG LPG</option>
+                                <option value="12 KG">12 KG Bright</option>
                             </select>
                         </div>
                         

@@ -163,8 +163,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="/home/" class="brand-link">
-            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+           
+            <span class="brand-text font-weight-light">Usaha Gas Mandiri</span>
         </a>
 
         <!-- Sidebar -->
@@ -196,7 +196,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/supir" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
+                            <i class="nav-icon fa fa-car"></i>
                             <p>
                                 Supir
                             </p>
@@ -204,7 +204,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/barang/" class="nav-link">
-                            <i class="nav-icon fas fa-chair"></i>
+                            <i class="nav-icon fas fa-box"></i>
                             <p>
                             Barang
                             </p>
@@ -212,9 +212,17 @@
                     </li>
                     <li class="nav-item">
                         <a href="/pesanan" class="nav-link">
-                            <i class="nav-icon fas fa-building"></i>
+                           <i class="nav-icon fa fa-shopping-cart" aria-hidden="true"></i>
                             <p>
                             Pesanan
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Customer" class="nav-link">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                            <p>
+                            Customer
                             </p>
                         </a>
                     </li>
